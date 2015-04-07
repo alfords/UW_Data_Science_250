@@ -118,6 +118,8 @@ x-y
 x*y
 x/y
 x^y
+
+# learn this one: takes two vectors (x and y), and a function "*"
 outer(x, y, "*")
 
 # here x is a vector:
