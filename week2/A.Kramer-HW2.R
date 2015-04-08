@@ -46,7 +46,7 @@ good <- (c < hlm) & (c > llm)
 c <- c[good]
 c
 
-# Relable the variables
+# Re-label the variables
 c1 <- c('BS', 'MS', 'PhD', 'HS', 'Bachelors', 'Masters', 'High School', 'BS', 'MS', 'MS')
 c1[c1 == "Bachelors"] <- "BS"
 c1[c1 == "Masters"] <- "MS"
@@ -56,14 +56,14 @@ c1
 
 # Normalize data
 
-# Min Max Normalizations
+   # Min Max Normalizations
 c2 <- c(-1, 1, 5, 1, 1, 17, -3, 1, 1, 3)
 a <- min(c2)
 b <- max(c2) - min(c2)
 normalized <- (c2 - a) / b
 normalized
 
-# Z-Score Normalization
+   # Z-Score Normalization
 c3 <- c(-1, 1, 5, 1, 1, 17, -3, 1, 1, 3)
 a <- mean(c3)
 b <- sd(c3)
@@ -85,4 +85,57 @@ blue
 # Discretize data
 x <- c(3, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 9, 12, 23, 23, 25, 81)
 
+   # Equal Range
+
+   # First, remove outliers.  Without removal of outliers, the discretization of the
+   # vector x will have only two categoris.
+hlm1 <- mean(x) + 2*sd(x)
+llm1 <- mean(x) - 2*sd(x)
+good <- (x < hlm1) & (x > llm1)
+x <- x[good]
+x
+   # I modified your code here - it was easier to do than write my own, but
+   # I got the idea - 3 bins of roughly equal size.
+range <- max(x) - min(x)
+range
+binWidth <- range / 3
+binWidth
+bin1Min <- -Inf
+bin1Max <- min(x) + binWidth
+bin2Max <- min(x) + 2*binWidth
+bin3Max <- Inf
+xDiscretized <- rep(NA, length(x))
+xDiscretized
+xDiscretized[bin1Min < x & x <= bin1Max] <- "Very Low"
+xDiscretized[bin1Max < x & x <= bin2Max] <- "Low"
+xDiscretized[bin2Max < x & x <= bin3Max] <- "High"
+xDiscretized
+
+# 3 bins of roughly equal amount
+x1 <- c(3, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 9, 12, 23, 23, 25, 81)
+bin <- sum(x1) / 3 # a weight of each bucket
+
+   # The vector is sorted, so I can use simple accumulators to get 3 bins of roughly
+   # equal wegith. This is a rough approximation. At the end of processing, the
+   # three buckets will have roughly the same weight. This algorithm works best with size 
+   # of teh buckets rather that with number of the buckets.
+
+bucket1 <- c()
+bucket2 <- c()
+bucket3 <- c()
+for (i in x1) {
+  if (sum(bucket1) <= bin) {
+    bucket1 <- c(bucket1, i)
+  } else if (sum(bucket1) + i > bin && sum(bucket2) + i <= bin) {
+    bucket2 <- c(bucket2, i)
+  } else if (sum(bucket2) + i > bin) {
+    bucket3 <- c(bucket3, i)
+  }
+}
+sum(bucket1)
+sum(bucket2)
+sum(bucket3)
+
+# From here, I can replace the content of the buckets with any text, add names and etc.
+# if neede.
 
