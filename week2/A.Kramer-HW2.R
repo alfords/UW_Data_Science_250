@@ -137,5 +137,5 @@ sum(bucket2)
 sum(bucket3)
 
 # From here, I can replace the content of the buckets with any text, add names and etc.
-# if neede.
+# if needed.
 
