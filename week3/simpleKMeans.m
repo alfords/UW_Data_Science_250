@@ -8,18 +8,18 @@ function centroids = simpleKMeans(points, centroids)
 clusterIDOld = -1;
 
 % Parameters for normalization and de-normalization
-% Determine the minimum and range of the points in both dimensions
+% Determine the mean and standard deviation of the points in both dimensions
 % Missing code:
 
 
 % Normalize points
-% for each dimension for each point subtract away its minimum and then divide by the range
+% for each dimension for each point subtract away its mean and then divide by the standard deviation
 % Missing code:
 
 
 % Normalize Centroids
-% For each dimension and centroid subtract away the minimum of the dimension
-% and then divide by the range of the dimension
+% For each dimension and centroid subtract away the mean of the dimension
+% and then divide by the standard deviation of the dimension
 % Missing code:
 
 
@@ -39,7 +39,7 @@ for (iter1 = 1:20)
 end % for
 
 % Denormalization
-% for each dimension for each centroid mutiply by range and then add minimum
+% for each dimension for each centroid mutiply by standard deviation and then add mean
 % Missing code:
 
 
