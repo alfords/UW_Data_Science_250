@@ -19,7 +19,7 @@ meanCol2 = std(points(:,2))
 % for each dimension for each point subtract away its mean and then divide by the standard deviation
 % Missing code:
 for i = 1:rows(points(:,1))
-	points(i,1) = (points(i,1) - meanCol1) / stdCol1
+    points(i,1) = (points(i,1) - meanCol1) / stdCol1
 end
 for j = 1:rows(points(:,2))
     points(i,2) = (points(i,2) - meanCol2) / stdCol2
@@ -30,7 +30,7 @@ end
 % and then divide by the standard deviation of the dimension
 % Missing code:
 for i = 1:rows(centroids(:,1))
-	centroids(i,1) = (centroids(i,1) - meanCol1) / stdCol1
+    centroids(i,1) = (centroids(i,1) - meanCol1) / stdCol1
 end
 for j = 1:rows(centroids(:,2))
     centroids(i,2) = (centroids(i,2) - meanCol2) / stdCol2
@@ -55,7 +55,7 @@ end % for
 % for each dimension for each centroid mutiply by standard deviation and then add mean
 % Missing code:
 for i = 1:rows(centroids(:,1))
-	centroids(i,1) = centroids(i,1) * stdCol1 + meanCol1 
+    centroids(i,1) = centroids(i,1) * stdCol1 + meanCol1 
 end
 for j = 1:rows(centroids(:,2))
     centroids(i,2) = centroids(i,2) * stdCol2 + meanCol2
