@@ -2,7 +2,7 @@
 % The function takes points and initial centroids and 
 % returns centroids K-mean centroids
 function centroids = simpleKMeansFinished(points, centroids)
-% test:  centroids = simpleKMeans(simplePoints, [0, 0; -1, 0; 0, 1])
+% test:  centroids = simpleKMeansFinished(simplePoints, [0, 0; -1, 0; 0, 1])
 % test:  simpleKMeansTests
 % Get ridiculous values for the initial cluster ids
 clusterIDOld = -1;
