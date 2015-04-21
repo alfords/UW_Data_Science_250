@@ -93,31 +93,32 @@ calculateClusterCenters <- function(observations=sampleObservations, clusterLabe
 findLabelOfClosestCluster <- function(observations = sampleObservations, clusterCenters=centersGuess)
 {
   # Get the number of clusterCenters
-  Put code in place of this line
+  numberOfClusters <- nrow(clusterCenters)
   # Get the number of observations
-  Put code in place of this line
+  numberOfObservations <- nrow(observations)
   # Create a matrix that will contain the squared distances from each observation to each center
   # The matrix has numberOfObservations rows and numberOfClusters columns
-  Put code in place of this line
+  SquareOfVectoreLength <- matrix(nrow=numberOfObservations, ncol=numberOfClusters)
   # Determine the distance from the center to each observation
   # For loop for each observation number
-  Put code in place of this line
+  for (observationNo in 1:numberOfObservations)
   {
     # For loop for each center number
-    Put code in place of this line
+    for (clusterNo in 1:numberOfClusters)
     {
       # What is the difference between the current observation and the current center?
       # In other words: What is the vector between the observation and center?
-      Put code in place of this line
+      observationToCenter <- observations[observationNo,] - clusterCenters[clusterNo,]
       # What is the distance squared of this vector?
       # In other words: what is the sum of the squares of the vector elements?
-      Put code in place of this line
+      distanceSquared <- sum(observationToCenter^2)
       # If the distance squared was NA then make it infinite
-      Put code in place of this line
+      if (is.na(distanceSquared))
+          distanceSquared <- Inf
       # Assign the distance squared to the proper element in the matrix created above
-      Put code in place of this line
+      SquareOfVectoreLength[observationNo, clusterNo] <- distanceSquared
     } # end of the for loop for each center number
   } # end of the for loop for each observation number
   # Determine the labels of the closest center
-  Put code in place of this line
+  max.col(-SquareOfVectoreLength)
 } # end of findLabelOfClosestCluster
