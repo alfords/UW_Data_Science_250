@@ -66,23 +66,28 @@ KMeans <- function(observations = sampleObservations, clusterCenters = centersGu
 calculateClusterCenters <- function(observations=sampleObservations, clusterLabels=labelsRandom)
 {
   # How many clusterCenters will we make?  What is the maximum cluster label? 
-  maxCluster = max(clusterLabels)
-  # Create a matrix where each row is a cluster center.  The number of columns reflects the dimensionality of the space.
-  tmpMatrix <- cbind(clusterLabels, observations) # combine clusterLabels and observations
+  maxClusters = max(clusterLabels) # Max clusters
+  dimensions=ncol(observations)    # Number of dimensions
+  # Create a matrix where each row is a cluster center.  The number of columns reflects the dimensionality 
+  # of the space.
+  myMatrix <- cbind(clusterLabels, observations) # combine clusterLabels and observations
+  clusterCenters <- matrix(nrow=maxClusters, ncol=dimensions) # Create clusterCenters matrix
   # For loop through each cluster label 
-  for (i in 1:clusterLabels)
+  for (i in 1:maxClusters)
   {
     # Get only the observations from one cluster
-    Put code in place of this line
+    tmp <- myMatrix[myMatrix[,1] == i,]
     # Determine the mean of that cluster in the 1st dimension and assign this mean
     # to the 1st dimension of the center
-    Put code in place of this line
+    mean1 <- mean(tmp[,2])
     # Determine the mean of that cluster in the 2nd dimension and assign this mean
     # to the 2nd dimension of the center
-    Put code in place of this line
+    mean2 <- mean(tmp[,3])
+    # Populate return matrix
+    clusterCenters[i,] <- c(mean1, mean2)
   } # Ends the for loop through each cluster id
   # Return the clusterCenters
-  Put code in place of this line
+  clusterCenters
 } # end of calculateClusterCenters
 
 # A function that returns the cluster IDs for each observation
