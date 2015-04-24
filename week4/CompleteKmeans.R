@@ -39,7 +39,7 @@ source("KMeansHelper.R")
 KMeans <- function(observations = sampleObservations, clusterCenters = centersGuess)
 {   
   # Initialize the cluster labels from the previous iteration with NULL
-  oldLabels<-rep(-1, nrow(observations))
+  oldLabels <- rep(-1, nrow(observations))
   # repeat the following processes using a loop.  Prevent infinite loop with a for loop of 25 iterations
   for (i in 1:25)
   {
