@@ -39,25 +39,25 @@ source("KMeansHelper.R")
 KMeans <- function(observations = sampleObservations, clusterCenters = centersGuess)
 {   
   # Initialize the cluster labels from the previous iteration with NULL
-  Put code in place of this line
+  oldLabels<-rep(-1, nrow(observations))
   # repeat the following processes using a loop.  Prevent infinite loop with a for loop of 25 iterations
-  Put code in place of this line
+  for (i in 1:25)
   {
     # For each observation find the label of its closest cluster center
-    Put code in place of this line
+    currentLabels<-findLabelOfClosestCluster(observations,clusterCenters)
     # Plot observations and clusterCenters
     ClusterPlot(observations, clusterCenters, currentLabels)
     # If there was no change in cluster labels, then break
-    Put code in place of this line
+    if(identical(oldLabels, currentLabels)) break
     # For each cluster of observations determine its center
-    Put code in place of this line
+    clusterCenters<-calculateClusterCenters(observations,currentLabels)
     # Plot observations and clusterCenters
     ClusterPlot(observations, clusterCenters, currentLabels)
     # remember currentLabels before currentLabels is re-assigned in the next iteration
-    Put code in place of this line
+    oldLabels<-currentLabels
   } # end of the for loop
   # Return the clusterCenters
-  Put code in place of this line
+  clusterCenters
 } # end of KMeans
 
 # For each cluster of observations determine its center
