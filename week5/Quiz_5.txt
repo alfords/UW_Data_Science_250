@@ -1,0 +1,126 @@
+CollapseQuick Links
+Lena 401kx
+Treasury Directx
+Treasurey Directx
+Aleksey's Resumex
+Elena's Latest Resumex
+Add Quick Link
+CollapseGoogle Calendar
+ 
+ 
+More 
+1 of 20,215
+ 
+Data Science UW 2015: Quiz 05
+Inbox
+	x
+Ernst Henle
+	
+Apr 25 (1 day ago)
+		
+
+Q1
+
+Execute the in-class exercise Elbow.R.  How many centroids are there if both IQ and Parent Income are normalized (default)?  (http://en.wikipedia.org/wiki/Determining_the_number_of_clusters_in_a_data_set)
+
+2 or less
+
+3
+
+4
+
+5 or more
+
+ 
+
+Q2
+
+Execute the in-class exercise Elbow.R after you comment-out normalization of Parent Income. How many centroids are there if IQ is normalized but Parent Income is not normalized?
+
+2 or less
+
+3
+
+4
+
+5 or more
+
+ 
+
+Q3
+
+Execute the in-class exercise Elbow.R after you comment-out only normalization of IQ but not Parent Income.  How many centroids are there if IQ is not normalized but Parent Income is normalized?
+
+2 or less
+
+3
+
+4
+
+5 or more
+
+ 
+
+Q4
+
+Execute the in-class exercise Elbow.R after you comment-out normalization of IQ and Parent Income.
+
+How many centroids are there if neither are normalized?
+
+2 or less
+
+3
+
+4
+
+5 or more
+
+ 
+
+Q5
+
+How does gender affect clustering? (See the final table of cluster centers aka centroids)
+
+About the same as other dimensions.
+
+More than the other dimensions
+
+Less than the other dimensions
+
+ 
+
+Q6
+
+Which numeric dimension has more effect if you do not normalize? 
+
+ParentIncome
+
+IQ
+
+ 
+
+Q7
+
+Clusters separate more on IQ when:
+
+Parent Income is not normalized and IQ is normalized
+
+Parent Income is normalized and IQ is not normalized
+
+Parent Income is normalized and IQ is normalized
+
+ 
+
+Q8
+
+If clusters separate primarily on Parent Income, it is because
+
+Parent Income varies more (*)
+
+Parent Income normalizes better
+
+Parent Income has a Gaussian distribution
+
+Parent Income affects College Plans
+
+ 
