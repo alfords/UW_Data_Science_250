@@ -21,7 +21,7 @@ source("ClassificationHelper.R")
 # Partition data between training and testing sets
 
 # Replace the following line with a function that partitions the data correctly
-dataframeSplit <- BadPartition(dataframe, fractionOfTest=0.4) # Make change here
+dataframeSplit <- FastPartition(dataframe, fractionOfTest=0.4) # Make change here
 testSet <- dataframeSplit$testSet
 trainSet <-dataframeSplit$trainSet
 
@@ -47,14 +47,15 @@ predictedProbabilities.GLM <- predict(glmModel, newdata=testSet, type="response"
 # http://cran.r-project.org/web/packages/e1071/e1071.pdf
 
 # Create Naive Bayes model
-# Make change here
+nbModel <- naiveBayes(formula, data=trainSet, family="binomial")
 # Predict the outcomes for the test data
-# Make change here
+temp <- predict(nbModel, newdata=testSet, type="raw")
+predictedProbabilities.NB <- temp[,0]
 ###################################################
 
 # Confusion Matrix
 
-threshold = 0.5
+threshold <- 0.5
 
 #Confusion Matrix for Logistic Regression
 # convert the predicted probabilities to predictions
@@ -65,10 +66,10 @@ print(table(predicted.GLM, testSet$Severity))
 
 #Confusion Matrix for Naive Bayes
 # convert the predicted probabilities to predictions
-# Make change here
+predicted.NB <- as.numeric(predictedProbabilities.NB > threshold)
 print(" ")
 print(" -------------------------------- ")
 print("Confusion Matrix Naive Bayes")
 # create a table to compare predicted values to actual values
-# Make change here
+print(table(predicted.NB, testSet$Severity))
 ###################################################
