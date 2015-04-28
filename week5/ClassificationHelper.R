@@ -50,12 +50,24 @@ BadPartition <- function(dataSet, fractionOfTest = 0.3)
 
 ExactPartition <- function(dataSet, fractionOfTest = 0.3)
 {
-  # Make change here
+    randoms <- runif(nrow(dataSet))
+    sortedRandoms <- sort(randoms)
+    testThreshold <- sortedRandoms[length(sortedRandoms) * fractionOfTest]
+    testSelection <- randoms <= testThreshold
+    testSet <- dataSet[testSelection,]
+    trainSet <- dataSet[!testSelection,]
+    data <- list(testSet=testSet, trainSet=trainSet)
+    data
 }
 
 FastPartition <- function(dataSet, fractionOfTest = 0.3)
 {
-  # Make change here
+    randoms <- runif(nrow(dataSet))
+    testSelection <- randoms <= fractionOfTest
+    testSet <- dataSet[testSelection,]
+    trainSet <- dataSet[!testSelection,]
+    data <- list(testSet=testSet, trainSet=trainSet)
+    data
 }
 
 ###################################################
