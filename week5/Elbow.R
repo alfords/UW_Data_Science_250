@@ -7,10 +7,10 @@
 
 # In class Exercise/Quiz: 
 # What is the impact of normalizing the numeric columns, IQ and Parent Income?
-# 1.) How many centroids are there if both IQ and Parent Income are normalized?
-# 2.) How many centroids are there if IQ is normalized but Parent Income is not normalized?
-# 3.) How many centroids are there if IQ is not normalized but Parent Income is normalized?
-# 4.) How many centroids are there if neither IQ nor Parent Income are normalized?
+# 1.) How many centroids are there if both IQ and Parent Income are normalized? 4
+# 2.) How many centroids are there if IQ is normalized but Parent Income is not normalized? 3
+# 3.) How many centroids are there if IQ is not normalized but Parent Income is normalized? 2
+# 4.) How many centroids are there if neither IQ nor Parent Income are normalized? 3
 # 5.) How does gender affect clustering? (See the final table of cluster centers aka centroids)
 # 6.) Which numeric dimension, ParentIncome or IQ, has more effect if you do not normalize?
 # 7.) Under which conditions do clusters separate the most on IQ?
