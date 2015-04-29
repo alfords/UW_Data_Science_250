@@ -50,7 +50,7 @@ predictedProbabilities.GLM <- predict(glmModel, newdata=testSet, type="response"
 nbModel <- naiveBayes(formula, data=trainSet, family="binomial")
 # Predict the outcomes for the test data
 temp <- predict(nbModel, newdata=testSet, type="raw")
-predictedProbabilities.NB <- temp[,0]
+predictedProbabilities.NB <- temp[,2]
 ###################################################
 
 # Confusion Matrix
