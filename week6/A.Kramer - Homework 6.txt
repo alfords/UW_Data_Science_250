@@ -1,0 +1,52 @@
+Aleksey Kramer
+
+Question 1: Why are performance metrics better on training data than on test data?
+    Answer: Matrics is better because model is optimized on training data, thus, results from
+            the actual data will be not as good as in with testing data.
+
+
+Question 2: How do you determine which data are training data and which data are test data?
+    Answer: Randomly partition a data set into training and test data using 30/70 ratio as
+            outlined in the class (actually, depends on the size of the data set).
+
+
+Question 3: Answer
+
+|-------|-------|
+|       |       |
+|   85	|   3   | 
+|       |       |
+|-------|-------|
+|       |       |
+|   15	|   7   |
+|       |       |
+|-------|-------| 
+	
+Threshold:    0.50
+Sensitivity:  0.97
+Specificity:  0.32
+Accuracy:     0.84
+Precision:    0.85
+Recall:       0.97
+
+
+Question 4: The probability threshold for a classification varies in an ROC chart from 0 to 1.
+
+    a: What point of the graph corresponds to a threshold of zero?
+    Answer: when FPR and TPR are ZERO
+   
+    b: What point of the graph corresponds to a threshold of one?
+    Answer: when FPR and TPR are 1
+
+    c: What point of the graph corresponds to a threshold of 0.5? (trick question)
+    Answer: Excersise 1 - FPR 0.40, TPR 0.80
+            Excercise 2 - FPR 0.33, TPR 0.75
+
+
+Question 5: A Classification is tested on 1000 cases. In the approximate middle of its ROC 
+            chart there is a point where the false positive rate is 0.4, the true positive 
+            rate is 0.8, and the accuracy is 0.7.
+
+    a: What does the confusion matrix look like?
+
+    b: What can you say about the probability threshold at that point? (trick question)
