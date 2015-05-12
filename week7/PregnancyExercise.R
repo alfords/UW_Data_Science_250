@@ -47,5 +47,10 @@ A = matrix(c(r1,r2,r3,r4), ncol=4, byrow=TRUE)
 # The right-hand side of the linear system:
 # Add code here
 
+b <- c(1,0,0.89,0.1)
+
 # Solve the equation:
 ?solve
+x <- solve(A, b)
+names(x) <- c('TP', 'FP', 'FN', 'TN')
+print(x)
