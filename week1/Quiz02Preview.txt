@@ -1,0 +1,130 @@
+########################################
+########################################
+What is the value of a if you type and enter into an R console: a = 3 + 5;
+
+  nothing
+  a is not defined
+  8  
+  a = 3  
+  Null or undefined depending on your console settings
+########################################
+In an R console, you type in and enter:  a <- 3 + 5
+What is the response in the R console? 
+
+  a = 3 + 5  
+  a or 8; Depending on the console setting  
+  A prompt followed by a = 8
+  nothing. Just a prompt
+########################################
+In an R console, you type in and enter:  a <- 3 + 5; a
+What is the response in the R console? 
+
+  a = 3 + 5  
+  8 
+  A prompt followed by a = 8
+  nothing. Just a prompt
+########################################
+At an Octave prompt, you type in and enter (beware of the semi colon):  a = 3 + 5;
+What is the response in the Octave console?
+
+	a = 3 + 5 followed by a prompt
+	a or 8 depending on the console setting  
+	a = 8 followed by a prompt
+	nothing. Just a prompt
+########################################
+At an Octave/MATLAB prompt, you type in and enter:  a = 3 + 5
+What is the response in the Octave console?
+
+	a = 3 + 5 followed by a prompt
+	Null or undefined depending on your console settings  
+	a = 8 followed by a prompt
+	nothing. Just a prompt
+########################################
+In Octave you assign a=1; and then a(3)=3; The value of a(2) is:
+
+	0
+	1
+	2
+	3
+	null/NA
+	none of these options
+########################################
+In R you assign a <- 1; and then a[3] <- 3; The value of a[2] is:
+
+	0
+	1
+	2
+	3
+	null/NA
+	none of these options
+########################################
+By convention, which is the preferred assignment in R of 3 + 5?  "a = 3 + 5" or "a <- 3 + 5":
+ 
+	a = 3 + 5  
+	a <- 3 + 5  
+	none of these options
+########################################
+Which is the preferred assignment in Octave of 3 + 5?  "a = 3 + 5" or "a <- 3 + 5":
+ 
+	a = 3 + 5  
+	a <- 3 + 5  
+	none of these options  
+########################################
+In Octave/MATLAB what do you get when you type the following into a console? 
+[1, 2, 3] * [1, 2, 3]
+
+	nothing / error
+	a scalar or 1X1 matrix
+	a 2D matrix
+	a 1D array or vector
+########################################
+In Octave/MATLAB what do you get when you type the following into a console?
+[1, 2, 3] * [1; 2; 3]
+
+	nothing / error
+	a scalar or 1X1 matrix
+	a 2D matrix
+	a 1D array or vector
+########################################
+In Octave, what do you get when you type the following into a console?
+[1; 2; 3] * [1, 2, 3]
+
+	nothing / error
+	a scalar or 1X1 matrix
+	a 2D matrix
+	a 1D array or vector
+########################################
+In R, what do you get when you type the following into a console?
+c(1, 2, 3) * c(1, 2, 3)
+
+	nothing / error
+	a scalar or 1X1 matrix
+	a 2D matrix
+	a 1D array or vector
+########################################
+In R, what do you get when you type the following into a console?
+c(1, 2, 3) * c(1; 2; 3)
+
+	nothing / error
+	a scalar or 1X1 matrix
+	a 2D matrix
+	a 1D array or vector
+########################################
+In R, what do you get when you type the following into a console?
+c(1; 2; 3) * c(1, 2, 3)
+
+	nothing / error
+	a scalar or 1X1 matrix
+	a 2D matrix
+	a 1D array or vector
+###################################################
+In R you can do matrix multiplication using %*%.  the function t() transposes a matrix.  "What is the MATLAB/Octave equivalent of the followin?
+c(2, 4, 6) %*% t(c(4, 5, 6, 7))
+You probably have to try this out in both R and Octave.
+
+	(*) [2, 4, 6]' * [4, 5, 6, 7]
+	[2, 4, 6] * [4, 5, 6, 7]'
+	[2, 4, 6] * [4, 5, 6, 7]
+	[2, 4, 6] * [4; 5; 6; 7]
+###################################################
+
