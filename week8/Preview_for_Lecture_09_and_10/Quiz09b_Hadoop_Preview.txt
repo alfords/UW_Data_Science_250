@@ -1,0 +1,27 @@
+############################################
+Quiz 09b Hadoop
+############################################
+SQL-like language for Hive that uses MapReduce
+############################################
+Transfers data between Hadoop and a relation database.
+############################################
+Machine learning algorithms for Hadoop
+############################################
+How many blocks will be created for a file that is 270 Mb. The default block size is 32 Mb and the replication factor is 2
+############################################
+The namenode distinguishes between a "dead" datanode and a network failure that prevents communiction by: 
+############################################
+The namenode died in a cluster that contained the namenode, a secondary namenode and 30 datanodes.  As a consequence:
+############################################
+Hadoop is based on these two papers:
+############################################
+What does the JobTracker do?
+############################################
+What does the TaskTracker do?
+############################################
+What does the NameNode do?
+############################################
+
+
+
+
