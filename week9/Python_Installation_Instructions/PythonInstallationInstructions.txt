@@ -1,0 +1,19 @@
+1) Open http://continuum.io/downloads in a web browser.
+2) Save the Anaconda-2.2.0 installer to your desktop (in windows this is an exe, and in Linux and Mac it is a .sh file)
+3) Run the installer.
+   * It can safely be installed locally without administrator permissions as "Just Me"
+   * It would be best to let anaconda/python2.7 be the default.  If you already have a Python install you are using, feel free to unselect these options.
+4) When finished, launch ipython notebook.  This will open a new web browser/tab with the ipython environment.
+   * On windows, browse via Start Menu->Anacond ->iPython Notebook
+   * On Linux/Mac, at a shell/terminal, type "ipython notebook"
+5) Create a new "python2" notebook (button on the top right hand side of the page that was opened)
+6) In an empty cell, type:
+
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+plt.plot(np.arange(-10,10), np.arange(-10, 10)**3)
+
+7) Press <shift> - <Enter> to execute that code.  A graph of y = x^3 should display.
+8) If there are any problems, post in the linkedin group, and we'll troubleshoot together.
+9) (optional, recommended) Read the User Interface Tour, and Notebook Help from the "Help" menu
