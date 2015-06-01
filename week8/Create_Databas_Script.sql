@@ -95,3 +95,12 @@ insert into MatrixAlgebra.Table2 values(4,'N',17);
 commit;
 
 select * from table2;
+
+## Question 3a
+
+select R * 7 'R', C * 7 'C', M * 7 'M' from MatrixAlgebra.Table2;
+
+## Question 3b
+
+## Could not figure it out on my own by just using SQL.  I can do it in PL/SQL or any programming language though..
+
